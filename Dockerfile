@@ -1,27 +1,21 @@
-FROM node:18 AS builder
+FROM node:18
 
 WORKDIR /app
 
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies and expo-cli globally
+# Install dependencies and a simple static file server
 RUN npm install
-RUN npm install -g expo-cli
+RUN npm install -g serve
 
 # Copy the rest of the code
 COPY . .
 
 # Build the web version
-RUN npm run build:web
-
-FROM nginx:alpine
-
-COPY --from=builder /app/web-build /usr/share/nginx/html
-
-# Copy custom nginx config
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+RUN npx expo export --platform web
 
 EXPOSE 5050
 
-CMD ["nginx", "-g", "daemon off;"]
+# Serve the static files using 'serve'
+CMD ["serve", "-s", "web-build", "-l", "5050"]
