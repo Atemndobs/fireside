@@ -1,0 +1,8 @@
+# Initialize git repository
+git init
+
+# Add all files
+git add .
+
+# Make initial commit
+git commit -m "Initial commit: Expo React Native podcast app"
