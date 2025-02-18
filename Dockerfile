@@ -2,12 +2,17 @@ FROM node:18 AS builder
 
 WORKDIR /app
 
+# Copy package files
 COPY package*.json ./
 
+# Install dependencies and expo-cli globally
 RUN npm install
+RUN npm install -g expo-cli
 
+# Copy the rest of the code
 COPY . .
 
+# Build the web version
 RUN npm run build:web
 
 FROM nginx:alpine
