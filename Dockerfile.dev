@@ -2,17 +2,17 @@ FROM node:18
 
 WORKDIR /app
 
-# Copy package files
 COPY package*.json ./
-
-# Clean install and generate new package-lock.json
-RUN rm -rf node_modules package-lock.json
-RUN npm cache clean --force
 RUN npm install
 
-# Copy the rest of the code
 COPY . .
 
+ENV EXPO_DEVTOOLS_LISTEN_ADDRESS=0.0.0.0
+ENV REACT_NATIVE_PACKAGER_HOSTNAME=localhost
+ENV WEB_PORT=8082
+ENV CI=1
+
+EXPOSE 8082
 EXPOSE 19000
 EXPOSE 19001
 EXPOSE 19002

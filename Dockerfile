@@ -10,6 +10,8 @@ RUN rm -rf node_modules package-lock.json
 RUN npm cache clean --force
 RUN npm install
 
+RUN cat package.json
+
 # Copy the rest of the code
 COPY . .
 
@@ -17,6 +19,9 @@ COPY . .
 RUN npx expo export --platform web
 
 EXPOSE 5050
+EXPOSE 80
 
 # Use Node's built-in http-server module
 CMD ["node", "-e", "require('http').createServer((req, res) => require('fs').createReadStream('web-build' + (req.url === '/' ? '/index.html' : req.url)).on('error', () => { res.statusCode = 404; res.end('Not found'); }).pipe(res)).listen(5050)"]
+
+
