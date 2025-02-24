@@ -5,10 +5,13 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useEffect, useState } from 'react';
 
 const HERO_VIDEOS = [
-  'https://minio.goose-neon.ts.net/curator/images/pod_pic.PNG',
-  'https://img.youtube.com/vi/slb67iDaLgE/maxresdefault.jpg',
+  'https://minio.goose-neon.ts.net/curator/assets/Riverside_high_pd.png', 
+  'https://minio.goose-neon.ts.net/curator/assets/anyang_afro.jpg', 
+  'https://minio.goose-neon.ts.net/curator/assets/Riverside_pod.png', 
+  // 'https://minio.goose-neon.ts.net/curator/assets/FireSide_Tribe.png'
+// ,  'https://img.youtube.com/vi/slb67iDaLgE/maxresdefault.jpg',
   // 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.5foXVIgd6g8lg5OcYo2I6gHaEL%26pid%3DApi&f=1',
-  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.byPUWkyhJy3cnZmiGVzu8QHaHb%26pid%3DApi&f=1',
+  // 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.byPUWkyhJy3cnZmiGVzu8QHaHb%26pid%3DApi&f=1',
   
 ];
 
@@ -58,9 +61,12 @@ export default function HomeScreen() {
         />
         <View style={styles.heroContent}>
           {/* <Text style={styles.title}>Fireside Music Podcast</Text> */}
-          <Text style={styles.title}>Fireside Vibes</Text>
+          <Text style={styles.title}>The Fireside Tribe</Text>
           <Text style={styles.subtitle}>
-            Cameroon's music scene, decoded—beats, bars, and the stories behind the sound!
+            ... by tripple A
+          </Text>
+          <Text style={styles.subtitle}>
+            Cameroon music scene decoded, and the stories behind the sound!
           </Text>
           <Pressable style={styles.ctaButton}>
             <Text style={styles.ctaButtonText}>Coming Soon</Text>

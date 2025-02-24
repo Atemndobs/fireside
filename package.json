@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "EXPO_NO_TELEMETRY=1 CI=1 expo start --port 8082 -w",
+    "dev": "EXPO_NO_TELEMETRY=1 CI=1 npx expo start --port 8082 -w",
     "build:web": "npx expo export --platform web",
     "lint": "expo lint"
   },

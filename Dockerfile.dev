@@ -2,8 +2,12 @@ FROM node:18
 
 WORKDIR /app
 
+# Copy package files
 COPY package*.json ./
+
+# Install dependencies and expo-cli globally
 RUN npm install
+RUN npm install -g expo-cli
 
 COPY . .
 
@@ -17,4 +21,5 @@ EXPOSE 19000
 EXPOSE 19001
 EXPOSE 19002
 
-CMD ["npm", "run", "dev"]
+# Use npx to ensure we're using the local expo version
+CMD ["npx", "expo", "start", "--port", "8082", "-w"]

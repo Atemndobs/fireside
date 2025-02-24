@@ -9,13 +9,13 @@ const SOCIAL_LINKS = [
 
 const HOSTS = [
   {
-    name: 'Eunice A.',
+    name: 'Atem Eunice A.',
     image: 'https://minio.goose-neon.ts.net/curator/images/euince_pod.jpg',
     bio: 'Tastemaker, and cultural curator with deep knowledge of Cameroonian music, from legends to rising stars. Well-connected in California’s media scene, she bridges African sounds with the global stage delivering insight, stories, and exclusives you won’t find anywhere els',
   },
     {
     name: 'Anyangatia ',
-    image: 'https://scontent-phx1-1.cdninstagram.com/v/t51.29350-15/119048148_346757493133637_2993709151330502877_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi42ODF4NjgxLnNkci5mMjkzNTAuZGVmYXVsdF9pbWFnZSJ9&_nc_ht=scontent-phx1-1.cdninstagram.com&_nc_cat=105&_nc_oc=Q6cZ2AEqjY36iJ92T4mkUMfp4DFbm6QGKZFoe0Y-AFzmRjigrEGUVTY7aPLwksqODZ5HmOXKugm_3mSLWs-bijcZ4fEv&_nc_ohc=8e_lOLybMuMQ7kNvgFE-U63&_nc_gid=b79e4f6160454a58a782fa31e228eb8d&edm=AEvXrH8BAAAA&ccb=7-5&ig_cache_key=MjM5NTE2NDk4OTE3MzYzNzczOA%3D%3D.3-ccb7-5&oh=00_AYAFCQWmi4DE2AO_tymcSFYRULmxzw1ahJF1IOmhBRKp0A&oe=67B921FA&_nc_sid=90379d',
+    image: 'https://minio.goose-neon.ts.net/curator/assets/anyang_side_view.png',
     bio: 'Co-Founder of Frenchkind, a creative force in music and branding. A mentor to many Cameroonian artists, he brings insider insights and untold stories to the Fireside Podcast',
   },
   {
@@ -31,17 +31,18 @@ export default function AboutScreen() {
     <ScrollView style={styles.container}>
       <View style={styles.header}>
         <Image
-          source={{ uri: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800' }}
+          // source={{ uri: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800' }}
+          source={{ uri: 'https://minio.goose-neon.ts.net/curator/assets/FireSide_Tribe.png' }}
           style={styles.headerImage}
         />
         <View style={styles.overlay} />
-        <Text style={styles.title}>About Cameroon Music Pulse</Text>
+        <Text style={styles.title}>About Us</Text>
       </View>
 
       <View style={styles.content}>
         {/* Hosts Section Moved to Top */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Meet Your Hosts</Text>
+          <Text style={styles.sectionTitle}>Meet Your Hosts, tripple A </Text>
           {HOSTS.map((host) => (
             <View key={host.name} style={styles.hostSection}>
               <Image
