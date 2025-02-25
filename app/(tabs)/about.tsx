@@ -15,7 +15,7 @@ const HOSTS = [
     bio: 'Tastemaker, and cultural curator with deep knowledge of Cameroonian music, from legends to rising stars. Well-connected in California’s media scene, she bridges African sounds with the global stage delivering insight, stories, and exclusives you won’t find anywhere els',
   },
     {
-    name: 'Anyangatia ',
+    name: 'Anyang',
     image: 'https://minio.goose-neon.ts.net/curator/assets/anyang_side_view.png',
     bio: 'Co-Founder of Frenchkind, a creative force in music and branding. A mentor to many Cameroonian artists, he brings insider insights and untold stories to the Fireside Podcast',
   },
@@ -33,7 +33,7 @@ export default function AboutScreen() {
       <View style={styles.header}>
         <Image
           // source={{ uri: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800' }}
-          source={{ uri: 'https://minio.goose-neon.ts.net/curator/assets/FireSide_Tribe.png' }}
+          source={{ uri: 'https://minio.goose-neon.ts.net/curator/assets/theFireSideTribe.png' }}
           style={styles.headerImage}
         />
         <View style={styles.overlay} />

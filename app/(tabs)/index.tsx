@@ -85,6 +85,16 @@ export default function HomeScreen() {
           </Link>
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+        <Pressable style={styles.episodeCard}>
+            <Image
+              source={{ uri: 'https://www.newstoriesafrica.com/wp-content/uploads/2023/03/Krys-M-1024x932.jpg' }}
+              style={styles.episodeImage}
+            />
+            <View style={styles.episodeInfo}>
+              <Text style={styles.episodeTitle}>Krys M: What makes her Unique?</Text>
+              <Text style={styles.episodeDate}>March 2025</Text>
+            </View>
+          </Pressable>
           <Pressable style={styles.episodeCard}>
             <Image
               source={{ uri: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.r3w5in7NgvD5IIGXu0PeOwHaHb%26pid%3DApi&f=1' }}

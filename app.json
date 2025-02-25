@@ -3,10 +3,16 @@
     "name": "the-fireside-tribe",
     "slug": "the-fireside-tribe",
     "version": "1.0.0",
+    "description": "A podcast app for the Fireside Tribe community.",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
@@ -15,7 +21,23 @@
     "web": {
       "bundler": "metro",
       "output": "single",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/favicon.png",
+      "pwa": true,
+      "display": "standalone",
+      "themeColor": "#000000",
+      "backgroundColor": "#ffffff",
+      "icons": [
+        {
+          "src": "./assets/images/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        },
+        {
+          "src": "./assets/images/android-chrome-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
     },
     "plugins": [
       "expo-router"
