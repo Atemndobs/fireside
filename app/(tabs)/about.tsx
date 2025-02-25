@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   hostBio: {
-    fontSize: 16,
+    fontSize: 14,
     color: '#cccccc',
     textAlign: 'center',
     lineHeight: 24,
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
   },
   socialText: {
     color: '#ffffff',
-    marginLeft: 8,
+    marginLeft: 4,
     fontSize: 16,
   },
   contactButton: {

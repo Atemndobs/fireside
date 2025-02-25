@@ -16,19 +16,19 @@
     "web": {
       "bundler": "metro",
       "output": "single",
-      "favicon": "./assets/images/favicon.png",
+      "favicon": "./assets/images/ft_logo_v1.png",
       "pwa": true,
       "display": "standalone",
       "themeColor": "#000000",
       "backgroundColor": "#ffffff",
       "icons": [
         {
-          "src": "./assets/images/android-chrome-192x192.png",
+          "src": "./assets/images/ft_logo_v1.png",
           "sizes": "192x192",
           "type": "image/png"
         },
         {
-          "src": "./assets/images/android-chrome-512x512.png",
+          "src": "./assets/images/ft_logo_v1.png",
           "sizes": "512x512",
           "type": "image/png"
         }
