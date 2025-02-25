@@ -18,10 +18,12 @@ COPY . .
 # Build the web version
 RUN npm run build:web
 
+# Copy the dist directory into the Docker image
+COPY dist .
+RUN ls -l
+
 EXPOSE 5050
 EXPOSE 80
 
 # Use Node's built-in http-server module
-CMD ["node", "-e", "require('http').createServer((req, res) => require('fs').createReadStream('out' + (req.url === '/' ? '/index.html' : req.url)).on('error', () => { res.statusCode = 404; res.end('Not found'); }).pipe(res)).listen(5050)"]
-
-COPY public/manifest.json ./public/manifest.json
+CMD ["node", "-e", "require('http').createServer((req, res) => require('fs').createReadStream('dist' + (req.url === '/' ? '/index.html' : req.url)).on('error', () => { res.statusCode = 404; res.end('Not found'); }).pipe(res)).listen(5050)"]

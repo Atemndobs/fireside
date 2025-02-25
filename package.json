@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "EXPO_NO_TELEMETRY=1 CI=1 npx expo start --port 8082 -w",
     "build:web": "npx expo export --platform web",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "android": "expo run:android",
+    "ios": "expo run:ios"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
