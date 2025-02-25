@@ -27,7 +27,7 @@ services:
     tty: true
     network_mode: bridge
   prod:
-    image: atemndobs/fireside-amd64:latest
+    image: atemndobs/fireside-amd64:v0.3
     ports:
       - "8082:8082"      # Metro web port
       - "19000:19000"    # Expo main port
