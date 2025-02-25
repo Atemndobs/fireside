@@ -2,10 +2,10 @@ import { View, Text, StyleSheet, ScrollView, Image, Pressable } from 'react-nati
 import { Ionicons } from '@expo/vector-icons';
 
 const SOCIAL_LINKS = [
-  { name: '@thefiresidetribe', icon: 'logo-twitter', url: '#' },
-  { name: '@thefiresidetribe', icon: 'logo-instagram', url: '#' },
-  { name: '@thefiresidetribe', icon: 'logo-youtube', url: '#' },
-  { name: '@thefiresidetribe', icon: 'logo-tiktok', url: '#' },
+  { id: 'twitter', name: '@thefiresidetribe', icon: 'logo-twitter', url: '#' },
+  { id: 'instagram', name: '@thefiresidetribe', icon: 'logo-instagram', url: '#' },
+  { id: 'youtube', name: '@thefiresidetribe', icon: 'logo-youtube', url: '#' },
+  { id: 'tiktok', name: '@thefiresidetribe', icon: 'logo-tiktok', url: '#' },
 ];
 
 const HOSTS = [
@@ -59,9 +59,9 @@ export default function AboutScreen() {
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Our Mission</Text>
           <Text style={styles.text}>
-            Cameroon Music Pulse is your premier destination for everything about Cameroon's music scene. 
-            We're dedicated to showcasing both established stars and emerging talents, providing deep 
-            insights into the music that's shaping Cameroonian culture and influencing the global music landscape.
+          The Fireside Tribe is your go-to podcast for deep, unfiltered conversations about Cameroonian music. 
+          We explore the sounds, stories, and struggles of artists, offering fresh perspectives on the industry’s 
+          evolution and its place in the global music landscape.
           </Text>
         </View>
 
@@ -81,7 +81,7 @@ export default function AboutScreen() {
           <Text style={styles.sectionTitle}>Connect With Us</Text>
           <View style={styles.socialLinks}>
             {SOCIAL_LINKS.map((link) => (
-              <Pressable key={link.name} style={styles.socialButton}>
+              <Pressable key={link.id} style={styles.socialButton}>
                 <Ionicons name={link.icon} size={24} color="#FF4500" />
                 <Text style={styles.socialText}>{link.name}</Text>
               </Pressable>

@@ -251,7 +251,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     flexWrap: 'wrap',
-    gap: 20,
+    gap: 10,
   },
   platformButton: {
     backgroundColor: '#2a2a2a',
