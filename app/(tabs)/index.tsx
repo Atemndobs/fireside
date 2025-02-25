@@ -25,19 +25,19 @@ const PODCAST_PLATFORMS = [
   },
   { 
     name: 'Spotify',
-    icon: 'https://minio.goose-neon.ts.net/curator/images/spotify.png',
+    icon: 'https://minio.goose-neon.ts.net/curator/assets/icons8-spotify-96.png',
     url: 'https://open.spotify.com/' 
   },
   { 
     name: 'Google Podcasts',
-    icon: 'https://minio.goose-neon.ts.net/curator/images/Google-Podcast-Logo.png',
+    icon: 'https://minio.goose-neon.ts.net/curator/assets/icons8-google-podcasts-96.png',
     url: 'https://podcasts.google.com/' 
   },
-  // { 
-  //   name: 'RSS Feed',
-  //   icon: 'https://minio.goose-neon.ts.net/curator/images/rss.png',
-  //   url: '#' 
-  // },
+  { 
+    name: 'Youtube',
+    icon: 'https://minio.goose-neon.ts.net/curator/assets/icons8-youtube-94.png',
+    url: '#' 
+  },
 ];
 
 export default function HomeScreen() {
@@ -91,8 +91,8 @@ export default function HomeScreen() {
               style={styles.episodeImage}
             />
             <View style={styles.episodeInfo}>
-              <Text style={styles.episodeTitle}>Kameni: The New Voice</Text>
-              <Text style={styles.episodeDate}>Mar 15, 2024</Text>
+              <Text style={styles.episodeTitle}>Kameni: What is next?</Text>
+              <Text style={styles.episodeDate}>March 2025</Text>
             </View>
           </Pressable>
           <Pressable style={styles.episodeCard}>
@@ -102,7 +102,7 @@ export default function HomeScreen() {
             />
             <View style={styles.episodeInfo}>
               <Text style={styles.episodeTitle}>Blanche Bailly's Journey</Text>
-              <Text style={styles.episodeDate}>Mar 8, 2024</Text>
+              <Text style={styles.episodeDate}>April 2025</Text>
             </View>
           </Pressable>
           <Pressable style={styles.episodeCard}>
@@ -112,7 +112,8 @@ export default function HomeScreen() {
             />
             <View style={styles.episodeInfo}>
               <Text style={styles.episodeTitle}>Ko-c: Breaking Boundaries</Text>
-              <Text style={styles.episodeDate}>Mar 1, 2024</Text>
+              {/* <Text style={styles.episodeDate}>Mar 1, 2024</Text> */}
+              <Text style={styles.episodeDate}>May 2025</Text>
             </View>
           </Pressable>
         </ScrollView>

@@ -2,9 +2,10 @@ import { View, Text, StyleSheet, ScrollView, Image, Pressable } from 'react-nati
 import { Ionicons } from '@expo/vector-icons';
 
 const SOCIAL_LINKS = [
-  { name: 'Twitter', icon: 'logo-twitter', url: '#' },
-  { name: 'Instagram', icon: 'logo-instagram', url: '#' },
-  { name: 'YouTube', icon: 'logo-youtube', url: '#' },
+  { name: '@thefiresidetribe', icon: 'logo-twitter', url: '#' },
+  { name: '@thefiresidetribe', icon: 'logo-instagram', url: '#' },
+  { name: '@thefiresidetribe', icon: 'logo-youtube', url: '#' },
+  { name: '@thefiresidetribe', icon: 'logo-tiktok', url: '#' },
 ];
 
 const HOSTS = [
@@ -176,7 +177,7 @@ const styles = StyleSheet.create({
   socialLinks: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 10,
+    gap: 4,
   },
   socialButton: {
     flexDirection: 'row',
@@ -188,7 +189,7 @@ const styles = StyleSheet.create({
   },
   socialText: {
     color: '#ffffff',
-    marginLeft: 10,
+    marginLeft: 8,
     fontSize: 16,
   },
   contactButton: {

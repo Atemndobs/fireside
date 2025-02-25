@@ -16,12 +16,12 @@ RUN cat package.json
 COPY . .
 
 # Build the web version
-RUN npx expo export --platform web
+RUN npm run build
 
 EXPOSE 5050
 EXPOSE 80
 
 # Use Node's built-in http-server module
-CMD ["node", "-e", "require('http').createServer((req, res) => require('fs').createReadStream('web-build' + (req.url === '/' ? '/index.html' : req.url)).on('error', () => { res.statusCode = 404; res.end('Not found'); }).pipe(res)).listen(5050)"]
+CMD ["node", "-e", "require('http').createServer((req, res) => require('fs').createReadStream('out' + (req.url === '/' ? '/index.html' : req.url)).on('error', () => { res.statusCode = 404; res.end('Not found'); }).pipe(res)).listen(5050)"]
 
-
+COPY public/manifest.json ./public/manifest.json

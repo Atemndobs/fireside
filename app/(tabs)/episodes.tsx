@@ -1,11 +1,28 @@
 import { View, Text, StyleSheet, FlatList, Image, Pressable } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
+interface Episode {
+  id: string;
+  title: string;
+  date: string;
+  duration: string;
+  image: string;
+  description: string;
+}
+
 const EPISODES = [
   {
     id: '1',
-    title: 'Kameni: The New Voice of Cameroon',
-    date: 'March 15, 2024',
+    title: 'Krys M: What makes her Unique?',
+    date: 'March 2025',
+    duration: '45 min',
+    image: 'https://www.newstoriesafrica.com/wp-content/uploads/2023/03/Krys-M-1024x932.jpg',
+    description: 'Dive deep into the journey of Krys M, one of Cameroon\'s most promising new voices, as she shares her story of breaking into the music scene.',
+  },
+  {
+    id: '5',
+    title: 'Kameni: What is next ?',
+    date: 'March 2025',
     duration: '45 min',
     image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.r3w5in7NgvD5IIGXu0PeOwHaHb%26pid%3DApi&f=1',
     description: 'Dive deep into the journey of Kameni, one of Cameroon\'s most promising new voices, as she shares her story of breaking into the music scene.',
@@ -13,7 +30,7 @@ const EPISODES = [
   {
     id: '2',
     title: 'Blanche Bailly: Redefining Afropop',
-    date: 'March 8, 2024',
+    date: 'April 2025',
     duration: '38 min',
     image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.byPUWkyhJy3cnZmiGVzu8QHaHb%26pid%3DApi&f=1',
     description: 'Join us for an exclusive interview with Blanche Bailly as she discusses her impact on Cameroon\'s music industry and her vision for the future.',
@@ -21,18 +38,18 @@ const EPISODES = [
   {
     id: '3',
     title: 'Ko-c: Breaking International Boundaries',
-    date: 'March 1, 2024',
+    date: 'May 2025',
     duration: '42 min',
     image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.5foXVIgd6g8lg5OcYo2I6gHaEL%26pid%3DApi&f=1',
     description: 'Ko-c shares his journey from local sensation to international recognition, discussing his unique style and future collaborations.',
   },
   {
     id: '4',
-    title: 'The Future of Cameroonian Music',
-    date: 'February 23, 2024',
+    title: 'Tayc: Going Global',
+    date: 'June 2025',
     duration: '35 min',
-    image: 'https://img.youtube.com/vi/slb67iDaLgE/maxresdefault.jpg',
-    description: 'A special roundtable discussion with industry experts about the evolving landscape of Cameroon\'s music scene and its global impact.',
+    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.GT52o8jwL9nkeMfVCdrcCwHaEK%26pid%3DApi&f=1&ipt=a1bf8e12f282ed6f183eb210d9d28afbdd07cbe8003b6e6e1c4d1aeaafb44ec8&ipo=images',
+    description: 'Explore the journey of Tayc, the Cameroonian artist making waves on the international music scene.',
   },
 ];
 
