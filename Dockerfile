@@ -16,7 +16,7 @@ RUN cat package.json
 COPY . .
 
 # Build the web version
-RUN npm run build
+RUN npm run build:web
 
 EXPOSE 5050
 EXPOSE 80
