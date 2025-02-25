@@ -8,6 +8,8 @@ const HERO_VIDEOS = [
   'https://minio.goose-neon.ts.net/curator/assets/Riverside_high_pd.png', 
   'https://minio.goose-neon.ts.net/curator/assets/anyang_afro.jpg', 
   'https://minio.goose-neon.ts.net/curator/assets/Riverside_pod.png', 
+  'https://images.pexels.com/photos/6883805/pexels-photo-6883805.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', 
+  'https://images.pexels.com/photos/270288/pexels-photo-270288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
   // 'https://minio.goose-neon.ts.net/curator/assets/FireSide_Tribe.png'
 // ,  'https://img.youtube.com/vi/slb67iDaLgE/maxresdefault.jpg',
   // 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.5foXVIgd6g8lg5OcYo2I6gHaEL%26pid%3DApi&f=1',
