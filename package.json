@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "EXPO_NO_TELEMETRY=1 CI=1 npx expo start --port 8082 -w",
-    "build:web": "npx expo export --platform web",
+    "build:web": "EXPO_NO_TELEMETRY=1 CI=1 npx expo export -p web --clear && npx serve dist",
+    "build:web:no-clear": "EXPO_NO_TELEMETRY=1 CI=1 npx expo export -p web && npx serve dist",
+    "build:web:no-clear-logging": "EXPO_NO_TELEMETRY=1 CI=1 echo 'Starting expo export' && npx expo export -p web && echo 'Expo export completed' && npx serve dist",
     "lint": "expo lint",
     "android": "expo run:android",
     "ios": "expo run:ios"
@@ -22,7 +24,6 @@
     "expo-haptics": "^14.0.1",
     "expo-linear-gradient": "^14.0.2",
     "expo-linking": "^7.0.5",
-    "expo-pwa": "^0.0.127",
     "expo-router": "4.0.17",
     "expo-splash-screen": "~0.29.22",
     "expo-status-bar": "^2.0.1",
@@ -43,6 +44,7 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~18.3.12",
+    "serve": "^14.2.4",
     "typescript": "^5.3.3"
   }
 }

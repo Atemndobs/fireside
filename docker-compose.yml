@@ -26,13 +26,14 @@ services:
     stdin_open: true
     tty: true
     network_mode: bridge
-  prod:
-    image: atemndobs/fireside-amd64:v0.4
+  pwa:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - NODE_ENV=production
     ports:
-      - "8082:8082"      # Metro web port
-      - "19000:19000"    # Expo main port
-      - "19001:19001"    # Metro bundler
-      - "19002:19002"    # Expo developer tools
+      - "8082:80"
     volumes:
       - .:/app
       - /app/node_modules
@@ -40,13 +41,31 @@ services:
       - EXPO_NO_TELEMETRY=1
       - NODE_ENV=production
       - CI=1
-      - REACT_NATIVE_PACKAGER_HOSTNAME=localhost
-      - EXPO_DEVTOOLS_LISTEN_ADDRESS=0.0.0.0
-      - WEB_PORT=8082
-    command: npm run dev
+    command: npx serve dist
     stdin_open: true
     tty: true
     network_mode: bridge
+  prod:
+      image: atemndobs/fireside-amd64:v0.7
+      ports:
+        - "8082:8082"      # Metro web port
+        - "19000:19000"    # Expo main port
+        - "19001:19001"    # Metro bundler
+        - "19002:19002"    # Expo developer tools
+      volumes:
+        - .:/app
+        - /app/node_modules
+      environment:
+        - EXPO_NO_TELEMETRY=1
+        - NODE_ENV=production
+        - CI=1
+        - REACT_NATIVE_PACKAGER_HOSTNAME=localhost
+        - EXPO_DEVTOOLS_LISTEN_ADDRESS=0.0.0.0
+        - WEB_PORT=8082
+      command: npm run dev
+      stdin_open: true
+      tty: true
+      network_mode: bridge
 networks:
   default:
     driver: bridge
