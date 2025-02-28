@@ -21,6 +21,7 @@ RUN npx expo export -p web
 RUN ls -l
 
 EXPOSE 80
+EXPOSE 3000
 
 # Install serve
 RUN npm install -g serve

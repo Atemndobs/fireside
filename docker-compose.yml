@@ -48,7 +48,8 @@ services:
   prod:
       image: atemndobs/fireside-amd64:v0.7
       ports:
-        - "8082:8082"      # Metro web port
+        - "8081:8082"      # Metro web port
+        - "8082:3000"      # Metro web port
         - "19000:19000"    # Expo main port
         - "19001:19001"    # Metro bundler
         - "19002:19002"    # Expo developer tools
