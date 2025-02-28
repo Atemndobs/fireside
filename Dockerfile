@@ -16,14 +16,14 @@ RUN cat package.json
 COPY . .
 
 # Build the web version
-RUN npm run build:web
+RUN npx expo export -p web
 
-# Copy the dist directory into the Docker image
-COPY dist .
 RUN ls -l
 
-EXPOSE 5050
 EXPOSE 80
 
-# Use Node's built-in http-server module
-CMD ["node", "-e", "require('http').createServer((req, res) => require('fs').createReadStream('dist' + (req.url === '/' ? '/index.html' : req.url)).on('error', () => { res.statusCode = 404; res.end('Not found'); }).pipe(res)).listen(5050)"]
+# Install serve
+RUN npm install -g serve
+
+# Serve the dist directory
+CMD ["serve", "-s", "dist"]
